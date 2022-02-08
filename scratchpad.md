@@ -123,20 +123,6 @@ To run our pipeline on Kubeflow Pipelines deployed to AWS, we will create a new 
     zenml stack register cloud_kubeflow_stack -m kubeflow_metadata_store -a cloud_artifact_store -o cloud_orchestrator -c cloud_registry
     ```
 
-
-
-{% hint style="info" %}
-The **metadata store** stores metadata inside the Kubeflow Pipelines internal MySQL database.
-{% endhint %}
-
-{% hint style="info" %}
-You can choose any name for your stack components apart from the ones used in the script above.
-{% endhint %}
-
-{% hint style="warning" %}
-&#x20;Make sure to replace `$PATH_TO_YOUR_BUCKET`and `$PATH_TO_YOUR_CONTAINER_REGISTRY` with the actual URI's of your bucket and container registry.
-{% endhint %}
-
 3\.  Activate the newly created stack.
 
 ```powershell
@@ -144,3 +130,17 @@ zenml stack set cloud_kubeflow_stack
 ```
 
 4\.  Do a pipeline run and check your Kubeflow UI to see it running there! 🚀
+
+{% hint style="info" %}
+* The **metadata store** stores metadata inside the Kubeflow Pipelines internal MySQL database.
+* You can choose any name for your stack components apart from the ones used in the script above.
+{% endhint %}
+
+{% hint style="warning" %}
+&#x20;Make sure to replace `$PATH_TO_YOUR_BUCKET`and `$PATH_TO_YOUR_CONTAINER_REGISTRY` with the actual URI's of your bucket and container registry.
+{% endhint %}
+
+{% content-ref url="./" %}
+[.](./)
+{% endcontent-ref %}
+
